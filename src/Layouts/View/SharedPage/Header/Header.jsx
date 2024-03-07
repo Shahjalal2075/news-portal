@@ -1,27 +1,73 @@
 import { NavLink } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaFacebookF, FaTwitter, FaYoutube, FaGoogle } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { TiWeatherPartlySunny } from "react-icons/ti";
+import { MdOutlineDateRange } from "react-icons/md";
 
 const Header = () => {
     return (
-        <div className="bg-[#DA0000]">
-            <div className="container mx-auto">
-                <div className="flex justify-between py-6 items-center">
-                    <div className="flex gap-8 items-center">
-                        <NavLink to={'/'} className=" text-lg text-[#fff] font-medium"><IoHome /></NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">জাতীয়</NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">যশোর</NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">খুলনা</NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">রাজনীতি</NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">খেলাধুলা</NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">আন্তর্জাতিক</NavLink>
-                        <NavLink to={'/'} className=" text-base text-[#fff] font-medium">বিনোদন</NavLink>
-                    </div>
-                    <div className="">
-                        <button className="text-lg text-[#fff] font-medium"><FaSearch /></button>
+        <div className="">
+            {/* TopBar */}
+            <div className="bg-[#1D1D1D]">
+                <div className="container mx-auto py-2">
+                    <div className="flex justify-between items-center">
+                        <div className="flex gap-6 text-sm text-[#fff] items-center">
+                            <div className="flex gap-1 items-center">
+                                <p><FaLocationDot /></p>
+                                <p>Bangladesh</p>
+                            </div>
+                            <div className="flex gap-1 items-center">
+                                <p><TiWeatherPartlySunny /></p>
+                                <p>31°</p>
+                            </div>
+                            <div className="flex gap-1 items-center">
+                                <p><MdOutlineDateRange /></p>
+                                <p>Today (Sunday, 23 September, 2001)</p>
+                            </div>
+
+                        </div>
+                        <div className="flex gap-4 items-center text-sm text-[#fff]">
+                            <a href="https://facebook.com"><FaFacebookF /></a>
+                            <a href="https://facebook.com"><FaTwitter /></a>
+                            <a href="https://facebook.com"><FaYoutube /></a>
+                            <a href="https://facebook.com"><FaGoogle /></a>
+                        </div>
                     </div>
                 </div>
+            </div>
 
+            <div className="container mx-auto">
+                <div className="flex justify-between items-center py-4">
+                    <div className="">
+                        <img src="https://i.ibb.co/jzHTFgY/logodark.png" alt="Nishi Barta" />
+                    </div>
+                    <div className="">
+                        <img src="https://i.ibb.co/LY8TWzz/ad-728x90.jpg" alt="Ads" />
+                    </div>
+                </div>
+            </div>
+
+            {/* Navbar */}
+            <div className="bg-[#DA0000]">
+                <div className="container mx-auto">
+                    <div className="flex justify-between py-6 items-center">
+                        <div className="flex gap-8 items-center">
+                            <NavLink to={'/'} className=" text-lg text-[#fff] font-medium"><IoHome /></NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">জাতীয়</NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">যশোর</NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">খুলনা</NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">রাজনীতি</NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">খেলাধুলা</NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">আন্তর্জাতিক</NavLink>
+                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">বিনোদন</NavLink>
+                        </div>
+                        <div className="">
+                            <button className="text-lg text-[#fff] font-medium"><FaSearch /></button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     );
