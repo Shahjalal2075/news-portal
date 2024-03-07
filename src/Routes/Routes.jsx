@@ -1,7 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layouts/Root/Root";
-import Home from "../Layouts/Home/Home";
 import ErrorPage from "../Layouts/ErrorPage/ErrorPage";
+import Home from "../Layouts/View/Home/Home";
+import ViewRoot from "../Layouts/View/ViewRoot/ViewRoot";
+import AdminRoot from "../Layouts/Admin/AdminRoot/AdminRoot";
+import Dashboard from "../Layouts/Admin/Dashboard/Dashboard";
 
 
 const Routes = createBrowserRouter([
@@ -12,8 +15,24 @@ const Routes = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <ViewRoot></ViewRoot>,
+                children: [
+                    {
+                        path: "/",
+                        element: <Home></Home>
+                    }
+                ]
             },
+            {
+                path: "/admin",
+                element: <AdminRoot></AdminRoot>,
+                children: [
+                    {
+                        path: "/admin",
+                        element: <Dashboard></Dashboard>
+                    }
+                ]
+            }
         ]
     },
 ]);
