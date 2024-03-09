@@ -6,6 +6,17 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import { MdOutlineDateRange } from "react-icons/md";
 
 const Header = () => {
+
+    const currentDate = new Date();
+
+    const weekNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    const week = weekNames[currentDate.getDay()];
+    const month = monthNames[currentDate.getMonth()];
+    const date = currentDate.getDate();
+    const year = currentDate.getFullYear();
+
     return (
         <div className="">
             {/* TopBar */}
@@ -23,7 +34,7 @@ const Header = () => {
                             </div>
                             <div className="flex gap-1 items-center">
                                 <p><MdOutlineDateRange /></p>
-                                <p>Today (Sunday, 23 September, 2001)</p>
+                                <p>Today ({week}, {date} {month}, {year})</p>
                             </div>
 
                         </div>
