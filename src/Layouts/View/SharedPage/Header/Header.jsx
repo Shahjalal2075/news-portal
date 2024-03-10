@@ -4,6 +4,7 @@ import { FaSearch, FaFacebookF, FaTwitter, FaYoutube, FaGoogle } from "react-ico
 import { FaLocationDot } from "react-icons/fa6";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { MdOutlineDateRange } from "react-icons/md";
+import LatestNewsHeading from "../LatestNewsHeading/LatestNewsHeading";
 
 const Header = () => {
 
@@ -11,7 +12,7 @@ const Header = () => {
 
     const weekNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    
+
     const week = weekNames[currentDate.getDay()];
     const month = monthNames[currentDate.getMonth()];
     const date = currentDate.getDate();
@@ -48,6 +49,7 @@ const Header = () => {
                 </div>
             </div>
 
+            {/* Logobar */}
             <div className="container mx-auto">
                 <div className="flex justify-between items-center py-4">
                     <div className="">
@@ -79,6 +81,10 @@ const Header = () => {
                     </div>
 
                 </div>
+            </div>
+
+            <div className="container mx-auto py-6">
+                <LatestNewsHeading></LatestNewsHeading>
             </div>
         </div>
     );
