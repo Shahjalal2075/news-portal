@@ -1,5 +1,6 @@
 import CategoryHome from "../AllSection/CategoryHome/CategoryHome";
 import TopNews from "../AllSection/TopNews/TopNews";
+import RightSlider from "../SharedPage/RightSlider/RightSlider";
 
 const Home = () => {
 
@@ -13,7 +14,7 @@ const Home = () => {
                     <CategoryHome></CategoryHome>
                 </div>
                 <div className="">
-
+                    <RightSlider></RightSlider>
                 </div>
             </div>
         </div>
