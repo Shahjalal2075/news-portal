@@ -62,6 +62,7 @@ const CategoryHome = () => {
                             </div>
                         </div>
                     </div>
+                    <hr className="border border-[#D40000] w-full my-3" />
                 </div>
             </div>
             <div className="">
@@ -122,6 +123,12 @@ const CategoryHome = () => {
                             </div>
                         </div>
                     </div>
+                    <hr className="border border-[#D40000] w-full my-3" />
+                </div>
+            </div>
+            <div className=" col-span-2">
+                <div className="w-full">
+                    <img src="https://i.ibb.co/jDVM0HC/ad-970x90-2x.jpg" alt="Ads" />
                 </div>
             </div>
             <div className="">
@@ -182,6 +189,7 @@ const CategoryHome = () => {
                             </div>
                         </div>
                     </div>
+                    <hr className="border border-[#D40000] w-full my-3" />
                 </div>
             </div>
             <div className="">
@@ -242,6 +250,12 @@ const CategoryHome = () => {
                             </div>
                         </div>
                     </div>
+                    <hr className="border border-[#D40000] w-full my-3" />
+                </div>
+            </div>
+            <div className=" col-span-2">
+                <div className="w-full">
+                    <img src="https://i.ibb.co/jDVM0HC/ad-970x90-2x.jpg" alt="Ads" />
                 </div>
             </div>
             <div className="">
@@ -302,6 +316,7 @@ const CategoryHome = () => {
                             </div>
                         </div>
                     </div>
+                    <hr className="border border-[#D40000] w-full my-3" />
                 </div>
             </div>
             <div className="">
@@ -362,6 +377,12 @@ const CategoryHome = () => {
                             </div>
                         </div>
                     </div>
+                    <hr className="border border-[#D40000] w-full my-3" />
+                </div>
+            </div>
+            <div className=" col-span-2">
+                <div className="w-full">
+                    <img src="https://i.ibb.co/jDVM0HC/ad-970x90-2x.jpg" alt="Ads" />
                 </div>
             </div>
         </div>
