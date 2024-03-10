@@ -9,7 +9,7 @@ const TopNews = () => {
                         <img src="https://i.ibb.co/23Nnt3y/shakib.png" alt="" />
                     </Link>
                     <Link className="bg-[#1D1D1D] text-[#fff] px-2 py-1 text-sm font-medium absolute transform top-[10px] left-[10px]">খেলাধুলা</Link>
-                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1 w-full">
+                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1 w-full w-full">
                         <div className="flex gap-4 text-sm text-[#fff] font-bold px-2 items-center">
                             <h2>Nishi Barta</h2>
                             <p>১৫ ই জুন, ২০২২</p>
@@ -26,7 +26,7 @@ const TopNews = () => {
                         <img src="https://i.ibb.co/23Nnt3y/shakib.png" alt="" />
                     </Link>
                     <Link className="bg-[#1D1D1D] text-[#fff] px-2 py-1 text-sm font-medium absolute transform top-[10px] left-[10px]">খেলাধুলা</Link>
-                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1">
+                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1 w-full">
                         <div className="flex gap-4 text-xs text-[#fff] font-bold px-2 items-center">
                             <h2>Nishi Barta</h2>
                             <p>১৫ ই জুন, ২০২২</p>
@@ -43,7 +43,7 @@ const TopNews = () => {
                         <img src="https://i.ibb.co/23Nnt3y/shakib.png" alt="" />
                     </Link>
                     <Link className="bg-[#1D1D1D] text-[#fff] px-2 py-1 text-sm font-medium absolute transform top-[10px] left-[10px]">খেলাধুলা</Link>
-                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1">
+                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1 w-full">
                         <div className="flex gap-4 text-xs text-[#fff] font-bold px-2 items-center">
                             <h2>Nishi Barta</h2>
                             <p>১৫ ই জুন, ২০২২</p>
@@ -60,7 +60,7 @@ const TopNews = () => {
                         <img src="https://i.ibb.co/23Nnt3y/shakib.png" alt="" />
                     </Link>
                     <Link className="bg-[#1D1D1D] text-[#fff] px-2 py-1 text-sm font-medium absolute transform top-[10px] left-[10px]">খেলাধুলা</Link>
-                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1">
+                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1 w-full">
                         <div className="flex gap-4 text-xs text-[#fff] font-bold px-2 items-center">
                             <h2>Nishi Barta</h2>
                             <p>১৫ ই জুন, ২০২২</p>
@@ -77,7 +77,7 @@ const TopNews = () => {
                         <img src="https://i.ibb.co/23Nnt3y/shakib.png" alt="" />
                     </Link>
                     <Link className="bg-[#1D1D1D] text-[#fff] px-2 py-1 text-sm font-medium absolute transform top-[10px] left-[10px]">খেলাধুলা</Link>
-                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1">
+                    <div className="absolute bottom-[0px] bg-[#111] bg-opacity-[70%] py-1 w-full">
                         <div className="flex gap-4 text-xs text-[#fff] font-bold px-2 items-center">
                             <h2>Nishi Barta</h2>
                             <p>১৫ ই জুন, ২০২২</p>
