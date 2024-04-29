@@ -1,0 +1,50 @@
+[
+    {
+        "name": "জাতীয়",
+        "link": "national"
+    },
+    {
+        "name": "যশোর",
+        "link": "jashore"
+    },
+    {
+        "name": "",
+        "link": ""
+    },
+    {
+        "name": "খুলনা",
+        "link": "khulna"
+    },
+    {
+        "name": "রাজনীতি",
+        "link": "politics"
+    },
+    {
+        "name": "",
+        "link": ""
+    },
+    {
+        "name": "খেলাধুলা",
+        "link": "sports"
+    },
+    {
+        "name": "আন্তর্জাতিক",
+        "link": "international"
+    },
+    {
+        "name": "",
+        "link": ""
+    },
+    {
+        "name": "বিনোদন",
+        "link": "entertainment"
+    },
+    {
+        "name": "চাকরি",
+        "link": "job"
+    },
+    {
+        "name": "",
+        "link": ""
+    }
+]

@@ -5,6 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { MdOutlineDateRange } from "react-icons/md";
 import LatestNewsHeading from "../LatestNewsHeading/LatestNewsHeading";
+import { useEffect, useState } from "react";
 
 const Header = () => {
 
@@ -17,6 +18,16 @@ const Header = () => {
     const month = monthNames[currentDate.getMonth()];
     const date = currentDate.getDate();
     const year = currentDate.getFullYear();
+
+    const [menu, setMenu] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:5000/menu`)
+            .then(res => res.json())
+            .then(data => {
+                const filteredData = data.filter(item => item.name.trim() !== "");
+                setMenu(filteredData);
+            });
+    }, [])
 
     return (
         <div className="">
@@ -67,14 +78,10 @@ const Header = () => {
                     <div className="flex justify-between py-6 items-center">
                         <div className="flex gap-8 items-center">
                             <NavLink to={'/'} className=" text-lg text-[#fff] font-medium"><IoHome /></NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">জাতীয়</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">যশোর</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">খুলনা</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">রাজনীতি</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">খেলাধুলা</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">আন্তর্জাতিক</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">বিনোদন</NavLink>
-                            <NavLink to={'/'} className=" text-base text-[#fff] font-medium">চাকরি</NavLink>
+                            {
+                                menu.map(nav => <NavLink key={nav._id} to={`/${nav.link}`} className=" text-base text-[#fff] font-medium">{nav.name}</NavLink>)
+                            }
+
                         </div>
                         <div className="">
                             <button className="text-lg text-[#fff] font-medium"><FaSearch /></button>

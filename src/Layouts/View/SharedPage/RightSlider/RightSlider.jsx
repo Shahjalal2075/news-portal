@@ -179,7 +179,7 @@ const RightSlider = () => {
             </div>
 
             {/* Facebook page */}
-            <div className="bg-[#F8F8F8] flex justify-center items-center my-10">
+            {/* <div className="bg-[#F8F8F8] flex justify-center items-center my-10">
                 <div className="p-8">
                     <iframe
                         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnishibarta%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
@@ -189,7 +189,7 @@ const RightSlider = () => {
                         allow="encrypted-media"
                     ></iframe>
                 </div>
-            </div>
+            </div> */}
 
             {/* Ads */}
             <div className="bg-[#F8F8F8] flex justify-center items-center">
