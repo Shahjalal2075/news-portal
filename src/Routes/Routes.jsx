@@ -5,6 +5,9 @@ import Home from "../Layouts/View/Home/Home";
 import ViewRoot from "../Layouts/View/ViewRoot/ViewRoot";
 import AdminRoot from "../Layouts/Admin/AdminRoot/AdminRoot";
 import Dashboard from "../Layouts/Admin/Dashboard/Dashboard";
+import AdminLogin from "../Layouts/Admin/AdminLogin/AdminLogin";
+import PrivateRoute from "./PrivateRoute";
+import CategoryNewsList from "../Layouts/Admin/CategoryNewsList/CategoryNewsList";
 
 
 const Routes = createBrowserRouter([
@@ -24,14 +27,23 @@ const Routes = createBrowserRouter([
                 ]
             },
             {
-                path: "/admin",
-                element: <AdminRoot></AdminRoot>,
+                path: "/dashboard",
+                element: <PrivateRoute><AdminRoot></AdminRoot></PrivateRoute>,
                 children: [
                     {
-                        path: "/admin",
+                        path: "/dashboard",
                         element: <Dashboard></Dashboard>
+                    },
+                    {
+                        path: "/dashboard/:category",
+                        element: <CategoryNewsList></CategoryNewsList>,
+                        loader: ({ params }) => fetch(`http://localhost:5000/admin-menu/${params.category}`)
                     }
                 ]
+            },
+            {
+                path: "/login",
+                element: <AdminLogin></AdminLogin>
             }
         ]
     },

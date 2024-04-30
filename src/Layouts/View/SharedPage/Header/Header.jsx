@@ -25,7 +25,8 @@ const Header = () => {
             .then(res => res.json())
             .then(data => {
                 const filteredData = data.filter(item => item.name.trim() !== "");
-                setMenu(filteredData);
+                const sortedData = filteredData.sort((a, b) => a.sl - b.sl);
+                setMenu(sortedData);
             });
     }, [])
 

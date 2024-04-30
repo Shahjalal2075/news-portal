@@ -1,0 +1,62 @@
+[
+    {
+        "sl": 1,
+        "name": "All News",
+        "link": ""
+    },
+    {
+        "sl": 2,
+        "name": "All Journalist",
+        "link": "journalist"
+    },
+    {
+        "sl": 3,
+        "name": "Site Setting",
+        "link": "setting"
+    },
+    {
+        "sl": 4,
+        "name": "জাতীয়",
+        "link": "national"
+    },
+    {
+        "sl": 5,
+        "name": "যশোর",
+        "link": "jashore"
+    },
+    {
+        "sl": 6,
+        "name": "খুলনা",
+        "link": "khulna"
+    },
+    {
+        "sl": 7,
+        "name": "রাজনীতি",
+        "link": "politics"
+    },
+    {
+        "sl": 8,
+        "name": "খেলাধুলা",
+        "link": "sports"
+    },
+    {
+        "sl": 9,
+        "name": "আন্তর্জাতিক",
+        "link": "international"
+    },
+    {
+        "sl": 10,
+        "name": "বিনোদন",
+        "link": "entertainment"
+    },
+    {
+        "sl": 11,
+        "name": "চাকরি",
+        "link": "job"
+    },
+    {
+        "sl": 12,
+        "name": "অজানা",
+        "link": "ojana"
+    }
+]
