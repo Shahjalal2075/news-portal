@@ -30,8 +30,8 @@ const RightSlider = () => {
 
                     {
                         latestNews.map(news => <LatestNewsCard
-                        key={news._id}
-                        news={news}
+                            key={news._id}
+                            news={news}
                         ></LatestNewsCard>)
                     }
 
@@ -57,6 +57,21 @@ const RightSlider = () => {
                     ></iframe>
                 </div>
             </div> */}
+
+            {/* AI Chatbot Test */}
+
+            <div className="bg-[#F8F8F8] flex justify-center items-center my-10">
+                <div className="p-8">
+                    <iframe
+                        src="https://www.chatbase.co/chatbot-iframe/gk7ZJzAbBcPF_csPdlHDD"
+                        title="Chatbot"
+                        width="100%"
+                        style={{ height: '100%', minHeight: '700px' }}
+                        frameBorder="0"
+                    ></iframe>
+
+                </div>
+            </div>{/*  */}
 
             {/* Ads */}
             <div className="bg-[#F8F8F8] flex justify-center items-center">

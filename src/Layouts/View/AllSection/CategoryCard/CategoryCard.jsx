@@ -42,7 +42,7 @@ const CategoryCard = ({ section }) => {
                     </div>
                     :
                     <div className="w-full">
-                        <img src="https://i.ibb.co/jDVM0HC/ad-970x90-2x.jpg" alt="Ads" />
+                        <img src="https://i.ibb.co/vcztdnh/ad-970x90-2x.jpg" alt="Ads" />
                     </div>
             }
         </div>

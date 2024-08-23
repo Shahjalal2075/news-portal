@@ -8,6 +8,7 @@ import Dashboard from "../Layouts/Admin/Dashboard/Dashboard";
 import AdminLogin from "../Layouts/Admin/AdminLogin/AdminLogin";
 import PrivateRoute from "./PrivateRoute";
 import CategoryNewsList from "../Layouts/Admin/CategoryNewsList/CategoryNewsList";
+import NewsAdd from "../Layouts/Admin/NewsAdd/NewsAdd";
 
 
 const Routes = createBrowserRouter([
@@ -35,9 +36,14 @@ const Routes = createBrowserRouter([
                         element: <Dashboard></Dashboard>
                     },
                     {
-                        path: "/dashboard/:category",
+                        path: "/dashboard/:link",
                         element: <CategoryNewsList></CategoryNewsList>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/admin-menu/${params.category}`)
+                        loader: ({ params }) => fetch(`http://localhost:5000/admin-menu/${params.link}`)
+                    },
+                    {
+                        path: "/dashboard/:link/add",
+                        element: <NewsAdd></NewsAdd>,
+                        loader: ({ params }) => fetch(`http://localhost:5000/admin-menu/${params.link}`)
                     }
                 ]
             },

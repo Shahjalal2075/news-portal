@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Swal from 'sweetalert2';
@@ -6,14 +6,17 @@ import { useEffect, useState } from "react";
 
 const CategoryNewsList = () => {
 
-    const { category } = useParams();
+    const menu = useLoaderData();
+    const { name,link } = menu;
 
     const [categoryNews, setCategoryNews] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/news/${category}`)
+        fetch(`http://localhost:5000/news/${link}`)
             .then(res => res.json())
             .then(data => setCategoryNews(data));
-    }, [category]);
+    }, [link]);
+
+    console.log(categoryNews)
 
     const handleDelete = (id) => {
         console.log(id)
@@ -57,12 +60,12 @@ const CategoryNewsList = () => {
             <div className='bg-[#eee] pt-8 pb-14 px-8'>
                 <div className="flex pb-6 justify-between items-center">
                     <div className="">
-                        <h2 className="text-[#28084B] text-2xl font-bold">{categoryNews[0]&&categoryNews[0].categoryBn}</h2>
+                        <h2 className="text-[#28084B] text-2xl font-bold">{name}</h2>
                     </div>
                     <div>
-                        <button className="px-4 cursor-pointer py-2 rounded-lg bg-[#733CFF] border border-[#733CFF] hover:border-[#733CFF] text-[#fff] hover:text-[#733CFF] hover:bg-[#fff]">
+                        <Link to={`/dashboard/${link}/add`} className="px-4 cursor-pointer py-2 rounded-lg bg-[#733CFF] border border-[#733CFF] hover:border-[#733CFF] text-[#fff] hover:text-[#733CFF] hover:bg-[#fff]">
                             Add News
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="overflow-x-auto bg-[#fff] p-2 rounded-lg">

@@ -3,6 +3,7 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import { MdOutlineDateRange } from "react-icons/md";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const AdminHeader = () => {
     const currentDate = new Date();
@@ -48,7 +49,9 @@ const AdminHeader = () => {
                 </div>
             </div>
             <div className="">
-                <img src="https://i.ibb.co/qyvRMH2/logolight.png" alt="Nishi Barta" />
+                <Link to={`/dashboard`}>
+                    <img src="https://i.ibb.co/qyvRMH2/logolight.png" alt="Nishi Barta" />
+                </Link>
             </div>
             <div className="flex gap-4 items-center">
                 <button className="ml-4" onClick={handleLogOutToggle}>
