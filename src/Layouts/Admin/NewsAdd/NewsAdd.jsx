@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const NewsAdd = () => {
 
+    const { user } = useContext(AuthContext);
     const menu = useLoaderData();
     const { name, link } = menu;
 
     const [details, setDetails] = useState("");
     const [detailsView, setDetailsView] = useState("");
     const [coverFile, setCoverFile] = useState(null);
+    const [coverPreview, setCoverPreview] = useState(null);
 
     const handleDetailsChange = (e) => {
         const value = e.target.value;
@@ -18,9 +21,18 @@ const NewsAdd = () => {
         setDetails(value.replace(/\r?\n/g, "/n"));  // Replacing new line with \n
     };
 
-    const handleFileChange = (e, setFiles) => {
-        const files = Array.from(e.target.files);
-        setFiles(files.length === 1 ? files[0] : files);
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setCoverFile(file);
+
+            // Generate preview URL
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setCoverPreview(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
     };
 
     const uploadToImgBB = async (file) => {
@@ -40,21 +52,35 @@ const NewsAdd = () => {
         }
     };
 
-    const handleAddProduct = (e) => {
+    const handleAddProduct = async (e) => {
         e.preventDefault();
+
+        if(!coverFile){
+            return;
+        }
+
+        const currentDate = new Date();
+        const date = currentDate.toLocaleString();
         const form = e.target;
+
         const headline = form.headline.value;
-        const date = form.date.value;
-        const cover = form.cover.value;
+
 
         const category = link;
         const categoryBn = name;
         const isTopHead = false;
         const isTopNews = false;
-        const journalist = "Nishi Barta"
+        const journalist = user.displayName;
 
-        const news = { category, categoryBn, date, headline, details, detailsView, cover, isTopHead, isTopNews, journalist };
-        console.log(news)
+        try {
+            const cover = coverFile ? await uploadToImgBB(coverFile) : null;
+            const news = { category, categoryBn, date, headline, details, detailsView, cover, isTopHead, isTopNews, journalist };
+            console.log(news)
+        }
+        catch {
+            console.log("error")
+        }
+
     }
 
     return (
@@ -90,7 +116,7 @@ const NewsAdd = () => {
                             </label>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                            <div className="form-control">
+                            {/* <div className="form-control">
                                 <label className="label">
                                     <span className="label-tex
                                 t font-medium">Date</span>
@@ -98,8 +124,23 @@ const NewsAdd = () => {
                                 <label className="input-group">
                                     <input required type="date" name="date" className="input bg-[#fff] input-bordered w-full px-2" />
                                 </label>
-                            </div>
-                            <div className="form-control">
+                            </div> */}
+                            <label>
+                                <input className="bg-[#EFF1F3] border px-6 py-4 text-base text-black rounded-2xl mt-3 w-full" type="file" accept="pdf/*" name="file" onChange={(e) => handleFileChange(e, setCoverFile)} style={{ display: "none" }} />
+                                <div className="ud-btn btn-white2 mb30">
+                                    <h2 className='bg-[#EFF1F3] border px-6 py-4 text-lg text-center cursor-pointer text-[#2B416A] rounded-2xl mt-3 w-full font-bold'>{coverFile ? coverFile.name : "Upload"}</h2>
+                                </div>
+                            </label>
+                            {coverPreview && (
+                                <div className="mt-3">
+                                    <img
+                                        src={coverPreview}
+                                        alt="Cover Preview"
+                                        className="w-auto h-20 rounded-lg border"
+                                    />
+                                </div>
+                            )}
+                            {/* <div className="form-control">
                                 <label className="label">
                                     <span className="label-tex
                                 t font-medium">Cover</span>
@@ -115,7 +156,7 @@ const NewsAdd = () => {
                                         required
                                     />
                                 </label>
-                            </div>
+                            </div> */}
                         </div>
 
 

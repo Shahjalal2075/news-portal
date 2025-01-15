@@ -9,6 +9,7 @@ import AdminLogin from "../Layouts/Admin/AdminLogin/AdminLogin";
 import PrivateRoute from "./PrivateRoute";
 import CategoryNewsList from "../Layouts/Admin/CategoryNewsList/CategoryNewsList";
 import NewsAdd from "../Layouts/Admin/NewsAdd/NewsAdd";
+import Test from "../Layouts/Test/Test";
 
 
 const Routes = createBrowserRouter([
@@ -50,6 +51,10 @@ const Routes = createBrowserRouter([
             {
                 path: "/login",
                 element: <AdminLogin></AdminLogin>
+            },
+            {
+                path: "/test",
+                element: <Test></Test>
             }
         ]
     },

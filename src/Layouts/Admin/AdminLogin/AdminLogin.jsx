@@ -21,7 +21,7 @@ const AdminLogin = () => {
                 toast("Login Succsessfull.");
                 setTimeout(() => {
                     navigate("/dashboard");
-                }, 1600);
+                }, 1610);
             })
             .catch(error => {
                 console.error(error);
@@ -46,7 +46,7 @@ const AdminLogin = () => {
                     </div>
                     <div className=" col-span-2 flex flex-col items-center justify-center">
 
-                        <h2 className="text-4xl font-bold mt-8 mb-4">Welcome</h2>
+                        <h2 className="text-4xl font-bold mt-8 mb-4">Welcome </h2>
 
                         <div className="flex flex-col justify-center items-center">
                             <form onSubmit={handleLogin} className="flex flex-col justify-center items-center" action="">
